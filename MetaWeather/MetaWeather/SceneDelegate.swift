@@ -2,8 +2,8 @@
 //
 //  SceneDelegate.swift
 //
-//  Created on 03/03/2021
-//  Copyright © 2021 IQUII s.r.l. All rights reserved.
+//  Created by Tomasz Idzi on 03/03/2021
+//  Copyright © 2021 Tomasz Idzi s.r.l. All rights reserved.
 //
 
 
@@ -18,7 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = scene as? UIWindowScene else { return }
+        let navigationController = ForecastContainerViewController()
+        window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

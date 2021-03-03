@@ -2,8 +2,8 @@
 //
 //  AppDelegate.swift
 //
-//  Created on 03/03/2021
-//  Copyright © 2021 IQUII s.r.l. All rights reserved.
+//  Created by Tomasz Idzi on 03/03/2021
+//  Copyright © 2021 Tomasz Idzi s.r.l. All rights reserved.
 //
 
 
