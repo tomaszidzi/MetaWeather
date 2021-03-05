@@ -39,11 +39,11 @@ private extension WeatherManager {
 
 extension WeatherManager {
  
-    func currentWeather(forCity city: CityModel, completion : @escaping (Result<WeatherResponse, Error>) -> Void) {
+    func currentWeather(forCity city: CityModel, completion : @escaping (Result<WeatherResponse, WeatherError>) -> Void) {
         weather(with: getForecast(forCity: city.code), completion: completion)
     }
     
-    private func weather<T>(with components: URLComponents, completion : @escaping (Result<T, Error>) -> ()) where T: Decodable {
+    private func weather<T>(with components: URLComponents, completion : @escaping (Result<T, WeatherError>) -> ()) where T: Decodable {
         guard let url = components.url else {
             return completion(.failure(WeatherError.network(description: "Invalid URL.")))
         }
