@@ -14,3 +14,14 @@ enum WeatherError: Error {
   case network(description: String)
 }
 
+extension WeatherError {
+   
+    public var errorDescription: String? {
+        switch self {
+        case .parsing(let description):
+            return description
+        case .network(let description):
+            return description
+        }
+    }
+}

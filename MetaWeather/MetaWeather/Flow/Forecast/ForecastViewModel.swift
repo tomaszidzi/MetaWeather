@@ -43,10 +43,10 @@ extension ForecastView {
     
     struct ErrorViewModel {
         
-        let error: String
+        let error: String?
         
-        init(error: Error) {
-            self.error = error.localizedDescription
+        init(error: WeatherError) {
+            self.error = error.errorDescription
         }
         
     }
