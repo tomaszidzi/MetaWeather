@@ -69,7 +69,7 @@ class ForecastViewController: UIViewController {
         self._view?.viewModel = viewModel
     }
     
-    private func updateInterfac(with error: Error) {
+    private func updateInterfac(with error: WeatherError) {
         let viewModel = ForecastView.ErrorViewModel(error: error)
         self._view?.errorViewModel = viewModel
     }
