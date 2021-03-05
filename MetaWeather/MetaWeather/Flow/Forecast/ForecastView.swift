@@ -79,7 +79,7 @@ class ForecastView: UIView {
         return label
     }()
     
-    private let iconImageView: UIImageView = {
+    let iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         return imageView
@@ -150,7 +150,7 @@ class ForecastView: UIView {
             weatherDescriptionLabel.text = ""
             tempLabel.text = ""
             tempMinMaxLabel.text = ""
-            self.iconImageView.image = nil
+            iconImageView.image = nil
         }
     }
     
